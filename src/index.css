@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-data-display {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .font-data-label {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .font-label-sm {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.glass-panel {
+  background: rgba(30, 34, 40, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.data-card {
+  background: linear-gradient(180deg, rgba(30, 34, 40, 1) 0%, rgba(26, 28, 31, 1) 100%);
+  position: relative;
+}
+
+.data-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+}
+
+.border-glow-primary {
+  border-left: 2px solid #adc6ff;
+}
+
+.border-glow-tertiary {
+  border-left: 2px solid #00daf3;
+}
+
+.border-glow-error {
+  border-left: 2px solid #ffb4ab;
+}
+
+.pulse-dot {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+}
+
+/* Custom Scrollbar for Industrial UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111316;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333538;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #414755;
+}

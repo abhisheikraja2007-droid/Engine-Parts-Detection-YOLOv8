@@ -1,0 +1,6 @@
+{
+  "name": "AssemblyGuard AI",
+  "description": "Industrial AI Supervision Dashboard for Engine Assembly Line Monitoring",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
